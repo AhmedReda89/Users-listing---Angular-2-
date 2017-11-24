@@ -20,7 +20,7 @@ export class GetUsersService {
     })
       .map((res: Response) => {
         console.log("login response" + JSON.stringify(res));
-        return res.data;
+        return (<any>res).data;
       })
   }
 
@@ -29,7 +29,7 @@ export class GetUsersService {
     return this.http.get(this.rootURL + 'api/users')
       .map((res: Response) => {
         console.log(res); 
-        return res.data;
+        return (<any>res).data;
       })
       //.catch((error: any) => Observable.throw(error.json().error || 'Server error'));
       .catch(error => Observable.throw("Error in x service"));
@@ -39,7 +39,7 @@ export class GetUsersService {
     return this.http.get(this.rootURL + 'api/users/' + id)
       .map((res: Response) => {
         console.log(res);
-        return res.data;
+        return (<any>res).data;
       })
       //.catch((error: any) => Observable.throw(error.json().error || 'Server error'));
       .catch(error => Observable.throw("Error in x service"));
@@ -53,7 +53,7 @@ export class GetUsersService {
     })
       .map((res: Response) => {
         console.log("Create response" + JSON.stringify(res));
-        return res.data;
+        return (<any>res).data;
       })
   }
 
@@ -65,7 +65,7 @@ export class GetUsersService {
     })
       .map((res: Response) => {
         console.log("Update response" + JSON.stringify(res));
-        return res.data;
+        return (<any>res).data;
       })
   }
 
@@ -74,7 +74,7 @@ export class GetUsersService {
     return this.http.delete(this.rootURL + 'api/users/' + id)
       .map((res: Response) => {
         console.log("delete response" + JSON.stringify(res.status));
-        return res.statusText;
+        return (<any>res).statusText;
       })
   } 
 
