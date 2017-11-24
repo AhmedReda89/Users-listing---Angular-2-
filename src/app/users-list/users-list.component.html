@@ -1,0 +1,34 @@
+<div class="users-listing">
+  <h2>
+    Users
+    <button class="pull-right icon-btn" (click)="createPanelVisibilty = !createPanelVisibilty">
+      <i class="fa fa-plus"></i>
+    </button>
+  </h2>
+  <div class="row no-margin create-panel" [hidden]="createPanelVisibilty">
+    <input type="text" placeholder="Name" [(ngModel)]="newName" />
+    <input type="text" placeholder="Job" [(ngModel)]="newJob" />
+    <button class="pull-right btn btn-primary create-btn" (click)="createUser()">Create</button>
+  </div>
+  <div class="user-node row no-margin" *ngFor="let user of users" [hidden]="itemRemoved">
+    <div class="col-xs-12">
+      <a [routerLink]="['/users', user.id]" [hidden]="user.updatePanelVisibilty">{{user.first_name}} {{user.last_name}}</a>
+      <span class="edit-wrap" [hidden]="!user.updatePanelVisibilty">
+        <input type="text" [(ngModel)]="user.first_name" />
+        <input type="text" [(ngModel)]="user.last_name" />
+      </span>
+      <div class="pull-right">
+        <button class="save-changes icon-btn" [hidden]="!user.updatePanelVisibilty" (click)="updateExistingUser(user.id, user.first_name, user.last_name);user.updatePanelVisibilty = !user.updatePanelVisibilty;">
+          <i class="fa fa-floppy-o"></i>
+        </button>
+        <button class="edit-user icon-btn" [hidden]="" (click)="user.updatePanelVisibilty = !user.updatePanelVisibilty">
+          <i class="fa fa-pencil-square-o"></i>
+        </button>
+        <button class="delete-user icon-btn" (click)="deleteExistingUser(user.id);">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

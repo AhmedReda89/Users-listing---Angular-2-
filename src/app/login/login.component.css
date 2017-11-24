@@ -1,0 +1,17 @@
+.login-wrap{
+    max-width:300px;
+    margin: auto;
+}
+label{
+    width:100%;display: inline-block;
+}
+button{
+    margin-top:10px;
+}
+.row{
+    margin-top:10px;
+}
+.sucess-msg{
+    margin-top:10px;
+    color:green;
+}

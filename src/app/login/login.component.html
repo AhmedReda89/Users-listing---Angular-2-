@@ -1,0 +1,14 @@
+<div class="login-wrap">
+  <div  class="form-group">
+    <label for="emailInput">Email</label>
+    <input type="email" id="emailInput" class="form-control" [(ngModel)]="emailValue" />
+  </div>
+  <div  class="form-group">
+    <label for="passwordInput">Password</label>
+    <input type="password" id="passwordInput" class="form-control" [(ngModel)]="passwordValue" />
+  </div>
+  <div class="row no-margin">
+    <button (click)="tryLogin();" class="btn btn-primary pull-right">Login</button>
+  </div>
+</div>
+<div *ngIf="loginSuccessful" class="sucess-msg text-center row">Thank you :)</div>

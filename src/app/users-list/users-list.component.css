@@ -1,0 +1,7 @@
+.users-listing{width:60%;min-width: 320px;margin:auto;}
+.users-listing h2 button{font-size: 0.8em;padding-top: 5px;}
+.users-listing .user-node{padding:6px 0;font-size: 1.2em;}
+.users-listing .user-node:nth-child(odd){background: #eee;}
+.users-listing .user-node .fa{margin:0 5px;}
+.icon-btn{background:transparent;border:none;}
+.create-btn{margin-top:-6px;margin-bottom:5px;}
