@@ -1,10 +1,11 @@
-# Ng4Task
+# Angular 2+ POC
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+** You might need to run 'npm install' first to install most of the dependencies.
 
 ## Code scaffolding
 
